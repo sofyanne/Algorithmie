@@ -1,0 +1,56 @@
+# Jeu de dé.
+from random import *
+
+manche = 1
+tour = 1
+userScore = 0
+computerScore = 0
+gameOver = 1
+
+tabDe = ["<⬜⬜⬜>\n<⬜⬛⬜>\n<⬜⬜⬜>\n", "<⬛⬜⬜>\n<⬜⬜⬜>\n<⬜⬜⬛>\n","<⬜⬜⬛>\n<⬜⬛⬜>\n<⬛⬜⬜>\n", "<⬛⬜⬛>\n<⬜⬜⬜>\n<⬛⬜⬛>\n", "<⬛⬜⬛>\n<⬜⬛⬜>\n<⬛⬜⬛>\n", "<⬛⬜⬛>\n<⬛⬜⬛>\n<⬛⬜⬛>\n"]
+while gameOver != 0:
+    print("Bonjour et bienvenue dans le jeu de lancé de dés!!!\nA chaque lancé de dés, il vous faudra renseigner un nombre compris entre 1 et 6!!!")
+    
+   
+
+
+    while manche <= 5:
+        print("\nMANCHE NUMERO: ", manche,"\n")
+
+        while tour <= 3:
+            print("Tour numéro : ", tour,"\n")
+
+            #Mécanique du jeu
+            (input("Veuillez lancé le dé en appyant sur entrée!!!\n"))
+            userThrow = randint(1,6)
+            computerThrow = randint(1,6)
+            print("Vous avez lancé : ") 
+            print(userThrow)
+            print(tabDe[userThrow - 1])
+            print("l'Ordinateur a lancé : ")
+            print(computerThrow)
+            print(tabDe[computerThrow - 1])
+
+            
+            
+            #Vérification des données entrées par l'utilisateur
+            
+
+            tour = tour + 1
+
+        tour = 1
+
+        print("\n\nScore après la manche numéro : ",manche,"\nOrdinateur = ",computerScore,"\nUtilisateur = ",userScore)
+
+        manche = manche + 1
+    #Comparaison finale des scores et attribution de la victoire
+
+    if userScore > computerScore:
+        print("Bravo cher utilisateur, vous avez gagné!!!")
+    elif userScore < computerScore:
+        print("Désoler cher looser, tu as perdu!!!")
+    else:
+        print("Score nul, impossible de vous départager")
+    
+    gameOver = int(input("\nSi vous souhaitez quitter le jeu entrez 0:"))
+    print("")
