@@ -1,0 +1,21 @@
+saisie = input("Veuillez entrer votre phrase : \n")
+#Suppression des caractères indésirables avec une fonction de remplaçement et passage en majuscule.
+phrase = saisie.upper()
+phrase = phrase.replace(" ","")
+phrase = phrase.replace(",","")
+phrase = phrase.replace("'","")
+phrase = phrase.replace(".","")
+
+taille = len(phrase)
+
+inverse = ""
+#Copie de la chaine de caractère dans une autre à l'inverse.
+for i in range(1, len(phrase) +1):
+
+    inverse +=phrase[taille-i]
+
+#Comparaison des deux chaines de caractères.
+if phrase == inverse:
+    print("c'est un palindrome")
+else:
+    print("Ce n'est pas un palindrome")
