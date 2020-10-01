@@ -1,0 +1,14 @@
+# Trier un tableau dans l'ordre croissant.(Méthode FOR ou While).
+
+#c= 0
+#compteur = len(tab)
+#while compteur != 0:
+for i in range(0, len(tab)-1, +1):
+    for i in range(0, len(tab)-1, +1):
+        if tab[i] > tab[i+1]:
+            c = tab[i]
+            tab[i] = tab[i+1]
+            tab[i+1] = c
+#    compteur -=1
+
+print(tab)
