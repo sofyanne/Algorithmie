@@ -1,0 +1,10 @@
+date = (input("Veuillez entrer la date au format JJ/MM/AAAA\n"))
+
+arrayDate = date.split("/")
+
+mois = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"]
+
+if (int(arrayDate[2]) > 2020) or (int(arrayDate[0]) > 31):
+    print("Vous avez tapé un format de date invalide. \n")
+else:
+    print("Nous sommes le ", arrayDate[0], mois[(int(arrayDate[1]))-1], arrayDate[2])
