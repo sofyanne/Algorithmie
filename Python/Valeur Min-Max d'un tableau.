@@ -1,0 +1,16 @@
+#Permet de donner les valeurs maximale et minimale d'un tableau.
+
+tab = [6, 5, 10, 15, 8, 4, 2, 3, 1]
+
+min = 10000000
+max = 0
+
+for i in range(0, len(tab), +1):
+    
+
+    if tab[i] > max:
+        max = tab[i]
+    if tab[i] < min:
+        min = tab[i]
+
+print("Valeur Min:", min,"\nValeur Max:",max)
